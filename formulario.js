@@ -1,8 +1,8 @@
-var formulario = document.querySelector("#form")
+var formulario = document.querySelector(".formulario") // No existe un id #form, se cambia a .formulario
 
 formulario.onsubmit = function(e) {
 
-  e.prevent();
+  e.preventDeFault();// Se corrige la escritura de preventDefault()
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
@@ -30,12 +30,7 @@ if (nombre.length > 0
   }
 }
 
-var botonBorrar = document.createElement("button")
-botonBorrar.textContent = "Eliminar invitado"
-botonBorrar.id = "boton-borrar"
-var corteLinea = document.createElement("br")
-document.body.appendChild(corteLinea)
-document.body.appendChild(botonBorrar);
+//Se elimina boton de borrado por estar dupĺicado
 
 function agregarInvitado(nombre, edad, nacionalidad) {
 
@@ -52,10 +47,10 @@ function agregarInvitado(nombre, edad, nacionalidad) {
     nacionalidad = "Peruana"
   }
 
-var lista = document.getElementById("lista-de-invitados")
+var lista = document.getElementById("lista-de-invitados") //Se crea un div en html para agregar este elemento
 
 var elementoLista = document.createElement("div")
-elementoLista.classList.added("elemento-lista")
+elementoLista.classList.add("elemento-lista")// Se quita el added, dejando solo add
 lista.appendChild(elementoLista)
 
 var spanNombre = document.createElement("span")
