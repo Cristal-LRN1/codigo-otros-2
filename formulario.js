@@ -23,12 +23,10 @@ formulario.onsubmit = function(e) {
     e.classList.add("error")
   }
 
-if (nombre.length > 0 
-  && (edad > 18 
-    && edad < 120) ) {
+if (nombre.length > 0 && (edad> 18 || edad<120)) {
   agregarInvitado(nombre, edad, nacionalidad)
   }
-}
+};
 
 //Se elimina boton de borrado por estar dupĺicado
 
@@ -63,14 +61,14 @@ elementoLista.appendChild(inputNombre)
 elementoLista.appendChild(espacio)
 
 function crearElemento(descripcion, valor) {
-var spanNombre = document.createElement("span")
-var inputNombre = document.createElement("input")
-var espacio = document.createElement("br")
-spanNombre.textContent = descripcion + ": "
-inputNombre.value = valor 
-elementoLista.appendChild(spanNombre)
-elementoLista.appendChild(inputNombre)
-elementoLista.appendChild(espacio)
+var spanNombre = document.createElement("span");
+var inputNombre = document.createElement("input");
+var espacio = document.createElement("br");
+spanNombre.textContent = descripcion + ": ";
+inputNombre.value = valor;
+elementoLista.appendChild(spanNombre);
+elementoLista.appendChild(inputNombre);
+elementoLista.appendChild(espacio);
 }
 
 crearElemento("Nombre", nombre)
