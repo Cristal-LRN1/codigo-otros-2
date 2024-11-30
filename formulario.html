@@ -9,11 +9,10 @@
   <title>Formulario</title>
 </head>
 <body>
-  <div id="lista-de-invitados"></div>
   <h1>Bienvenidos a mi fiesta</h1>
   <h2>Por favor, confirmar asistencia:</h2>
 
-  <form class="formulario">
+  <form class="formulario" id="formulario">
     Nombre <input type="text" name="name" id="name">
     <br />
     Edad <input type="number" name="age" id="age">
@@ -27,13 +26,14 @@
       <option value="vnzl">Venezolana</option>
     </select>
     <br />
-    <input type="submit">
+
+    <input type="submit" id="confirmar" value="Confirmar asistencia">
   </form>
 
   <div>
-    <h2>Lista de invitados</h2>
+    <h2 id="lista-de-invitados">Lista de invitados</h2> <!--Se añade id "lista-de-invitados"-->
 
-  </div>
+  </div> 
 
   <script src="formulario.js"></script>
 </body>
